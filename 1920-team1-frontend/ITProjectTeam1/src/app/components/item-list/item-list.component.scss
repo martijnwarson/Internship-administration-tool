@@ -1,0 +1,40 @@
+mat-card {
+  background-color: #f3f5f2; //pxl light green
+  margin-right: auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  max-height: 250px;
+}
+
+.mat-card.scrollable-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  > .mat-card-title-group {
+    display: block;
+  }
+
+  > .mat-card-content {
+    overflow-y: auto;
+  }
+}
+
+.green-color {
+  color: green;
+}
+
+.red-color {
+  color: red;
+}
+
+.orange-color {
+  color: orange;
+}
+
+.hover-effect:hover {
+  color: #58a518;
+}

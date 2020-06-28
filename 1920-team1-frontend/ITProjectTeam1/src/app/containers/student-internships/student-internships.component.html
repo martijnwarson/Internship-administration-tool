@@ -1,0 +1,72 @@
+<div fxLayout="column" fxLayoutGap="10px" class="max-width" *ngIf="internships">
+  <div fxFlex>
+    <h1>STAGEVOORSTELLEN</h1>
+  </div>
+  <div>
+    <div fxLayoutGap="10px" class="div-to-change">
+      <div fxFlex *ngIf="internships">
+        <h1>Alle stagevoorstellen</h1>
+        <mat-form-field style="width: 200px">
+          <mat-label>Filter</mat-label>
+          <mat-select [formControl]="courses" multiple>
+            <mat-option *ngFor="let course of coursesList" [value]="course.name">{{course.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: 200px; margin-left: 20px;">
+          <mat-label>Filter</mat-label>
+          <mat-select [formControl]="technologies" multiple>
+            <mat-option *ngFor="let technology of technologiesList" [value]="technology.name">{{technology.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <app-student-internship-list (refresh)="loadData()" [itemList]="internships"
+                                     (selectedItemId)="showItem($event)"></app-student-internship-list>
+      </div>
+      <div fxFlex *ngIf="favoriteInternships.length">
+        <h1>Mijn Favorieten</h1>
+        <app-student-internship-list (refresh)="loadData()" [itemList]="favoriteInternships"
+                                     (selectedItemId)="showItem($event)"></app-student-internship-list>
+      </div>
+    </div>
+
+  </div>
+  <div fxFlex class="card div-to-change zero-margin">
+    <div *ngIf="internship">
+      <mat-card>
+        <mat-card-content>
+          <p>
+            <strong>Titel:</strong> {{ internship.title}}
+          </p>
+          <p>
+            <strong>Omschrijving:</strong> {{ internship.description}}
+          </p>
+          <strong>Studierichting:</strong>
+          <div *ngFor="let les of internship.courses">
+            {{les.name}}
+          </div>
+          <div>
+            <p style="margin-bottom: 0px;">
+              <strong>
+                Technologieën:
+              </strong>
+            </p>
+            <div *ngFor="let technology of internship.technologies">
+              {{ technology.name}}
+            </div>
+          </div>
+          <p>
+            <strong> Technische omschrijving:</strong> {{ internship.techDescription }}
+          </p>
+          <p>
+            <strong>
+              Adres:</strong> {{ internship.address.street }}  {{internship.address.number}}  {{internship.address.zipCode}}  {{internship.address.country}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div *ngIf="!internships">
+  <h1>Er zijn momenteel geen stagevoorstellen</h1>
+</div>
+
+

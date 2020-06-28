@@ -1,0 +1,390 @@
+{
+  "lectors": [
+    {
+      "id": 1,
+      "name": "Rustige",
+      "firstName": "Eric",
+      "telephoneNumber": "+32123456789",
+      "email": "eric@doerustig.be",
+      "role": "coördinator",
+      "courses": [
+        {
+          "name": "Frans"
+        },
+        {
+          "name": "Engels"
+        },
+        {
+          "name": "Wiskunde"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "DeBozere",
+      "firstName": "Erica",
+      "telephoneNumber": "+32123454889",
+      "email": "erica@hotmail.com",
+      "role": "lector",
+      "courses": [
+        {
+          "name": ".Net"
+        },
+        {
+          "name": "Software analyse"
+        },
+        {
+          "name": "Java(bah)"
+        }
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "DuJardin",
+      "firstName": "Francois",
+      "telephoneNumber": "+32123454811",
+      "email": "francois@hotmail.com",
+      "role": "student"
+    }
+  ],
+  "internships": [
+    {
+      "id": 1,
+      "title": "Titel",
+      "description": "omschrijving",
+      "courses": [
+        {
+          "name": "Software analyse"
+        }
+      ],
+      "technologies": [
+        {
+          "name": ".Net"
+        },
+        {
+          "name": "Sql"
+        }
+      ],
+      "contactPerson": {
+        "name": "Poenveger",
+        "firstName": "Joris",
+        "telephoneNumber": "+32456123486",
+        "email": "joris@poenveger.be"
+      },
+      "promotor": {
+        "name": "Veger",
+        "firstName": "Andre",
+        "telephoneNumber": "+32456753486",
+        "email": "andre@veger.be"
+      },
+      "address": {
+        "street": "eindstraat",
+        "number": 7,
+        "bus": "2",
+        "zip": "3500",
+        "city": "niet uw zaak",
+        "country": "Congo"
+      },
+      "techdescription": "geweldige moeilijk technische omschrijving",
+      "researchtopic": "onderzoeksonderwerp",
+      "application": "false",
+      "resume": "false",
+      "reimbursement": "false",
+      "studentamount": "1",
+      "students": [
+        {
+          "id": 1,
+          "name": "DuJardin",
+          "firstName": "Francois",
+          "telephoneNumber": "+32123454811",
+          "email": "francois@hotmail.com",
+          "role": "student"
+        }
+      ],
+      "remarks": "terechte opmerking",
+      "validations": [
+        {
+          "id": 1,
+          "lector": {
+            "id": 1,
+            "name": "Rustige",
+            "firstName": "Eric",
+            "telephoneNumber": "+32123456789",
+            "email": "eric@doerustig.be",
+            "role": "coördinator",
+            "courses": [
+              {
+                "name": "Frans"
+              },
+              {
+                "name": "Engels"
+              },
+              {
+                "name": "Wiskunde"
+              }
+            ]
+          },
+          "remarks": [
+            "opmerking 1",
+            "opmerking 2",
+            "opmerking 3"
+          ],
+          "questions": [
+            "vraag 1",
+            "vraag 2"
+          ],
+          "state": "ACTIVE",
+          "date": "2020-02-15T16:51:08.681Z"
+        }
+      ],
+      "periods": [
+        {
+          "from": "2020-10-15T16:51:08.681Z",
+          "to": "2020-12-15T16:51:08.681Z"
+        }
+      ],
+      "state": "ACTIVE"
+    },
+    {
+      "id": 2,
+      "title": "Titel 2",
+      "description": "omschrijving",
+      "courses": [
+        {
+          "name": "Software analyse"
+        }
+      ],
+      "technologies": [
+        {
+          "name": ".Net"
+        },
+        {
+          "name": "Sql"
+        }
+      ],
+      "contactPerson": {
+        "name": "Poenveger",
+        "firstName": "Joris",
+        "telephoneNumber": "+32456123486",
+        "email": "joris@poenveger.be"
+      },
+      "promotor": {
+        "name": "Veger",
+        "firstName": "Andre",
+        "telephoneNumber": "+32456753486",
+        "email": "andre@veger.be"
+      },
+      "address": {
+        "street": "eindstraat",
+        "number": 7,
+        "bus": "2",
+        "zip": "3500",
+        "city": "niet uw zaak",
+        "country": "Congo"
+      },
+      "techdescription": "geweldige moeilijk technische omschrijving",
+      "researchtopic": "onderzoeksonderwerp",
+      "application": "false",
+      "resume": "false",
+      "reimbursement": "false",
+      "studentamount": "1",
+      "students": [
+        {
+          "id": 1,
+          "name": "DuJardin",
+          "firstName": "Francois",
+          "telephoneNumber": "+32123454811",
+          "email": "francois@hotmail.com",
+          "role": "student"
+        }
+      ],
+      "remarks": "terechte opmerking",
+      "validations": [
+        {
+          "id": 1,
+          "lector": {
+            "id": 1,
+            "name": "Rustige",
+            "firstName": "Eric",
+            "telephoneNumber": "+32123456789",
+            "email": "eric@doerustig.be",
+            "role": "coördinator",
+            "courses": [
+              {
+                "name": "Frans"
+              },
+              {
+                "name": "Engels"
+              },
+              {
+                "name": "Wiskunde"
+              }
+            ]
+          },
+          "remarks": [
+            "opmerking 1",
+            "opmerking 2",
+            "opmerking 3"
+          ],
+          "questions": [
+            "vraag 1",
+            "vraag 2"
+          ],
+          "state": "ACTIVE",
+          "date": "2020-02-15T16:51:08.681Z"
+        }
+      ],
+      "periods": [
+        {
+          "from": "2020-10-15T16:51:08.681Z",
+          "to": "2020-12-15T16:51:08.681Z"
+        }
+      ],
+      "state": "ACTIVE"
+    },
+    {
+      "id": 3,
+      "title": "Titel 3",
+      "description": "omschrijving",
+      "courses": [
+        {
+          "name": "Software analyse"
+        }
+      ],
+      "technologies": [
+        {
+          "name": ".Net"
+        },
+        {
+          "name": "Sql"
+        }
+      ],
+      "contactPerson": {
+        "name": "Poenveger",
+        "firstName": "Joris",
+        "telephoneNumber": "+32456123486",
+        "email": "joris@poenveger.be"
+      },
+      "promotor": {
+        "name": "Veger",
+        "firstName": "Andre",
+        "telephoneNumber": "+32456753486",
+        "email": "andre@veger.be"
+      },
+      "address": {
+        "street": "eindstraat",
+        "number": 7,
+        "bus": "2",
+        "zip": "3500",
+        "city": "niet uw zaak",
+        "country": "Congo"
+      },
+      "techdescription": "geweldige moeilijk technische omschrijving",
+      "researchtopic": "onderzoeksonderwerp",
+      "application": "false",
+      "resume": "false",
+      "reimbursement": "false",
+      "studentamount": "1",
+      "students": [
+        {
+          "id": 1,
+          "name": "DuJardin",
+          "firstName": "Francois",
+          "telephoneNumber": "+32123454811",
+          "email": "francois@hotmail.com",
+          "role": "student"
+        }
+      ],
+      "remarks": "terechte opmerking",
+      "validations": [
+        {
+          "id": 1,
+          "lector": {
+            "id": 1,
+            "name": "Rustige",
+            "firstName": "Eric",
+            "telephoneNumber": "+32123456789",
+            "email": "eric@doerustig.be",
+            "role": "coördinator",
+            "courses": [
+              {
+                "name": "Frans"
+              },
+              {
+                "name": "Engels"
+              },
+              {
+                "name": "Wiskunde"
+              }
+            ]
+          },
+          "remarks": [
+            "opmerking 1",
+            "opmerking 2",
+            "opmerking 3"
+          ],
+          "questions": [
+            "vraag 1",
+            "vraag 2"
+          ],
+          "state": "ACTIVE",
+          "date": "2020-02-15T16:51:08.681Z"
+        }
+      ],
+      "periods": [
+        {
+          "from": "2020-10-15T16:51:08.681Z",
+          "to": "2020-12-15T16:51:08.681Z"
+        }
+      ],
+      "state": "ACTIVE"
+    }
+  ],
+  "validations": [
+    {
+      "id": 1,
+      "lector": {
+        "id": 1,
+        "name": "Rustige",
+        "firstName": "Eric",
+        "telephoneNumber": "+32123456789",
+        "email": "eric@doerustig.be",
+        "role": "coördinator",
+        "courses": [
+          {
+            "name": "Frans"
+          },
+          {
+            "name": "Engels"
+          },
+          {
+            "name": "Wiskunde"
+          }
+        ]
+      },
+      "remarks": [
+        "opmerking 1",
+        "opmerking 2",
+        "opmerking 3"
+      ],
+      "questions": [
+        "vraag 1",
+        "vraag 2"
+      ],
+      "state": "ACTIVE",
+      "date": "2020-02-15T16:51:08.681Z"
+    }
+  ],
+  "periods": [
+    {
+      "from": "2020-10-15T16:51:08.681Z",
+      "to": "2020-12-15T16:51:08.681Z"
+    },
+    {
+      "from": "2020-02-15T16:51:08.681Z",
+      "to": "2020-04-15T16:51:08.681Z"
+    }
+  ]
+}

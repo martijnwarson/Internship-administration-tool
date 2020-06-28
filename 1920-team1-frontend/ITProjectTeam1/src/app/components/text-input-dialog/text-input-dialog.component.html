@@ -1,0 +1,17 @@
+<mat-dialog-content>
+  <div fxLayout="column">
+    <h3>Feedback formuleren</h3>
+    <div fxLayout="row">
+      <mat-form-field fxFlex>
+        <textarea [formControl]="feedBackFormControl" class="textarea" fxFlex matInput
+                  rows="8"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-card-actions>
+  <div fxLayoutAlign="end">
+    <button mat-raised-button class="primary-color" mat-dialog-close (click)="cancel()">Annuleer</button>
+    <button mat-raised-button class="primary-color" mat-dialog-close (click)="save()">Bewaar</button>
+  </div>
+</mat-card-actions>

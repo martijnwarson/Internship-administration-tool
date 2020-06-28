@@ -1,0 +1,61 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" class="max-width padding-bottom" *ngIf="!isLoading">
+  <div fxFlex>
+    <h1>ACTIEVE BEDRIJVEN</h1>
+  </div>
+  <div *ngIf="!activeCompanies">
+    <h3>Er zijn momenteel geen bedrijven om te tonen</h3>
+  </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px" *ngIf="activeCompanies && activeCompanies.length">
+    <div fxFlex fxFlex.gt-sm="50" *ngIf="activeCompanies">
+      <app-new-company-list [companyList]="activeCompanies"
+                            (selectedCompanyId)="showItem($event)"></app-new-company-list>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px" *ngIf="company && !loadingDetails">
+      <div>
+        <mat-card>
+          <mat-card-content>
+            <p>
+              <strong>Bedrijfsnaam:</strong> {{company.name}}
+            </p>
+            <p>
+              <strong>Straat:</strong> {{company.address.street}}
+            </p>
+            <p>
+              <strong>Nummer:</strong> {{company.address.number}}
+            </p>
+            <p>
+              <strong>Postcode:</strong> {{company.address.zipCode}}
+            </p>
+            <p>
+              <strong>Stad:</strong> {{company.address.city}}
+            </p>
+            <p>
+              <strong>Land:</strong> {{company.address.country}}
+            </p>
+            <p>
+              <strong>Functietitel contactpersoon:</strong> {{company.contactPerson.title}}
+            </p>
+            <p>
+              <strong>Voornaam contactpersoon:</strong> {{company.contactPerson.firstName}}
+            </p>
+            <p>
+              <strong>Achternaam contactpersoon:</strong> {{company.contactPerson.name}}
+            </p>
+            <p>
+              <strong>Email:</strong> {{company.contactPerson.email}}
+            </p>
+            <p>
+              <strong>Aantal werknemers:</strong> {{company.amountOfEmployees}}
+            </p>
+            <p>
+              <strong>Waarvan IT:</strong> {{company.amountOfEmployeesIt}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+

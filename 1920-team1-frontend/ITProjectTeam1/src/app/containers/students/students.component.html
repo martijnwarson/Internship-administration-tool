@@ -1,0 +1,36 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" class="max-width padding-bottom" *ngIf="!isLoading">
+  <div fxFlex>
+    <h1>STUDENTEN</h1>
+  </div>
+  <div *ngIf="!students">
+    <h3>Er zijn geen studenten gevonden</h3>
+  </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
+    <div fxFlex *ngIf="students">
+      <app-student-list [itemList]="students" (selectedItemId)="showItem($event)" (refresh)="refresh()"></app-student-list>
+    </div>
+    <div fxFlex *ngIf="student && !isLoadingDetails">
+      <mat-card>
+        <mat-card-content>
+          <p>
+            <strong>Naam:</strong> {{student.firstName}} {{student.name}}
+          </p>
+          <p>
+            <strong>Email:</strong> {{student.email}}
+          </p>
+          <p>
+            <strong>Telefoon:</strong> {{student.telephoneNumber}}
+          </p>
+          <p>
+            <strong>Studierichting:</strong> {{student.course.name}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div *ngIf="!students">
+  <h1>Er zijn momenteel geen studenten</h1>
+</div>

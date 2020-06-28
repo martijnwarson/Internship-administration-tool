@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\11702973\.nuget\packages\microsoft.net.test.sdk\16.4.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\11702973\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\11702973\.nuget\packages\microsoft.testplatform.testhost\16.4.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\11702973\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\11702973\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\11702973\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\11702973\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\11702973\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\11702973\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_WebApplication.-2014826339.00" t="ExcludeRecursive" />
+    <e p="C:\Users\11702973\AppData\Roaming\JetBrains\Rider2020.1\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\11702973\AppData\Roaming\JetBrains\Rider2020.1\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\11702973\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\11702973\RiderProjects\1920-team1-backend\WebApplication" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="WebApplication" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="aws-windows-deployment-manifest.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="buildspec.yml" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="CompanyController.cs" t="Include" />
+          <e p="CourseController.cs" t="Include" />
+          <e p="ErrorController.cs" t="Include" />
+          <e p="InternShipController.cs" t="Include" />
+          <e p="LectorController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
+          <e p="Mockupcontroller.cs" t="Include" />
+          <e p="PeriodController.cs" t="Include" />
+          <e p="PersonController.cs" t="Include" />
+          <e p="StudentController.cs" t="Include" />
+          <e p="TechnologyController.cs" t="Include" />
+          <e p="ValidationController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="Datacontext.cs" t="Include" />
+        </e>
+        <e p="Dtos" t="Include">
+          <e p="AddressDto.cs" t="Include" />
+          <e p="BaseDto.cs" t="Include" />
+          <e p="CompanyCreateDto.cs" t="Include" />
+          <e p="CompanyDto.cs" t="Include" />
+          <e p="CourseDto.cs" t="Include" />
+          <e p="FeedBackDto.cs" t="Include" />
+          <e p="InternshipDto.cs" t="Include" />
+          <e p="InternshipListDto.cs" t="Include" />
+          <e p="InternshipOverviewDto.cs" t="Include" />
+          <e p="InternShipUpdateStateDto.cs" t="Include" />
+          <e p="LectorDto.cs" t="Include" />
+          <e p="PeriodDto.cs" t="Include" />
+          <e p="PersonDto.cs" t="Include" />
+          <e p="PersonForLoginDto.cs" t="Include" />
+          <e p="StudentDto.cs" t="Include" />
+          <e p="StudentListDto.cs" t="Include" />
+          <e p="StudentOverviewDto.cs" t="Include" />
+          <e p="TechnologyDto.cs" t="Include" />
+          <e p="UpdateStateCompanyDto.cs" t="Include" />
+          <e p="ValidationCreateDto.cs" t="Include" />
+          <e p="ValidationOverviewDto.cs" t="Include" />
+          <e p="ValidationUpdateDto.cs" t="Include" />
+        </e>
+        <e p="Enums" t="Include">
+          <e p="CompanyStateEnum.cs" t="Include" />
+          <e p="InternshipStateEnum.cs" t="Include" />
+          <e p="RoleEnum.cs" t="Include" />
+          <e p="ValidationStateEnum.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="IPasswordGenerator.cs" t="Include" />
+          <e p="IPdfGenerator.cs" t="Include" />
+          <e p="IUserVerifier.cs" t="Include" />
+          <e p="PasswordGenerator.cs" t="Include" />
+          <e p="PdfGenerator.cs" t="Include" />
+          <e p="UserVerifier.cs" t="Include" />
+        </e>
+        <e p="Managers" t="Include">
+          <e p="AddressManager.cs" t="Include" />
+          <e p="CompanyManager.cs" t="Include" />
+          <e p="CourseManager.cs" t="Include" />
+          <e p="CoördinatorManager.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IAddressManager.cs" t="Include" />
+            <e p="ICompanyManager.cs" t="Include" />
+            <e p="ICourseManager.cs" t="Include" />
+            <e p="ICoördinatorManager.cs" t="Include" />
+            <e p="IInternshipManager.cs" t="Include" />
+            <e p="ILectorManager.cs" t="Include" />
+            <e p="ILoginManager.cs" t="Include" />
+            <e p="IModelManager.cs" t="Include" />
+            <e p="IPeriodManager.cs" t="Include" />
+            <e p="IPersonManager.cs" t="Include" />
+            <e p="IStudentManager.cs" t="Include" />
+            <e p="ITechnologyManager.cs" t="Include" />
+            <e p="IValidationManager.cs" t="Include" />
+          </e>
+          <e p="InternShipManager.cs" t="Include" />
+          <e p="LectorManager.cs" t="Include" />
+          <e p="LoginManager.cs" t="Include" />
+          <e p="ModelManager.cs" t="Include" />
+          <e p="PeriodManager.cs" t="Include" />
+          <e p="PersonManager.cs" t="Include" />
+          <e p="StudentManager.cs" t="Include" />
+          <e p="TechnologyManager.cs" t="Include" />
+          <e p="ValidationManager.cs" t="Include" />
+        </e>
+        <e p="Mappers" t="Include">
+          <e p="AddressMapper.cs" t="Include" />
+          <e p="BaseModelMapper.cs" t="Include" />
+          <e p="CompanyCreateMapper.cs" t="Include" />
+          <e p="CompanyMapper.cs" t="Include" />
+          <e p="CourseMapper.cs" t="Include" />
+          <e p="FeedBackMapper.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IAddressMapper.cs" t="Include" />
+            <e p="IBidirectionalBaseMapper.cs" t="Include" />
+            <e p="ICompanyCreateMapper.cs" t="Include" />
+            <e p="ICompanyMapper.cs" t="Include" />
+            <e p="ICourseMapper.cs" t="Include" />
+            <e p="IFeedBackMapper.cs" t="Include" />
+            <e p="IInternshipListMapper.cs" t="Include" />
+            <e p="IInternshipMapper.cs" t="Include" />
+            <e p="IInternshipOverviewMapper.cs" t="Include" />
+            <e p="ILectorMapper.cs" t="Include" />
+            <e p="IPeriodMapper.cs" t="Include" />
+            <e p="IPersonMapper.cs" t="Include" />
+            <e p="IStudentListMapper.cs" t="Include" />
+            <e p="IStudentMapper.cs" t="Include" />
+            <e p="IStudentOverviewMapper.cs" t="Include" />
+            <e p="ITechnologyMapper.cs" t="Include" />
+            <e p="IToDtoBaseModelMapper.cs" t="Include" />
+            <e p="IToModelBaseModelMapper.cs" t="Include" />
+            <e p="IValidationOverviewMapper.cs" t="Include" />
+            <e p="IValidationUpdateMapper.cs" t="Include" />
+          </e>
+          <e p="InternshipListMapper.cs" t="Include" />
+          <e p="InternshipMapper.cs" t="Include" />
+          <e p="InternshipOverviewMapper.cs" t="Include" />
+          <e p="LectorMapper.cs" t="Include" />
+          <e p="PeriodMapper.cs" t="Include" />
+          <e p="PersonMapper.cs" t="Include" />
+          <e p="StudentListMapper.cs" t="Include" />
+          <e p="StudentMapper.cs" t="Include" />
+          <e p="StudentOverviewMapper.cs" t="Include" />
+          <e p="TechnologyMapper.cs" t="Include" />
+          <e p="ValidationOverviewMapper.cs" t="Include" />
+          <e p="ValidationUpdateMapper.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20200413115104_initial_create.cs" t="Include" />
+          <e p="20200413115104_initial_create.Designer.cs" t="Include" />
+          <e p="20200418103007_adapted_StringEntity_to_Questions_Remarks.cs" t="Include" />
+          <e p="20200418103007_adapted_StringEntity_to_Questions_Remarks.Designer.cs" t="Include" />
+          <e p="20200504071207_multiple_Changes.cs" t="Include" />
+          <e p="20200504071207_multiple_Changes.Designer.cs" t="Include" />
+          <e p="20200504104753_Conditions.cs" t="Include" />
+          <e p="20200504104753_Conditions.Designer.cs" t="Include" />
+          <e p="20200504105018_reasonOfInactive.cs" t="Include" />
+          <e p="20200504105018_reasonOfInactive.Designer.cs" t="Include" />
+          <e p="20200518065632_FeedbackAdded.cs" t="Include" />
+          <e p="20200518065632_FeedbackAdded.Designer.cs" t="Include" />
+          <e p="20200518114559_FavoritesAdded.cs" t="Include" />
+          <e p="20200518114559_FavoritesAdded.Designer.cs" t="Include" />
+          <e p="20200518123257_emailadressUnique.cs" t="Include" />
+          <e p="20200518123257_emailadressUnique.Designer.cs" t="Include" />
+          <e p="DatacontextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Address.cs" t="Include" />
+          <e p="BaseModel.cs" t="Include" />
+          <e p="Company.cs" t="Include" />
+          <e p="Course.cs" t="Include" />
+          <e p="Coördinator.cs" t="Include" />
+          <e p="FeedBack.cs" t="Include" />
+          <e p="Internship.cs" t="Include" />
+          <e p="InternshipCourse.cs" t="Include" />
+          <e p="InternshipPeriod.cs" t="Include" />
+          <e p="InternshipPerson.cs" t="Include" />
+          <e p="InternshipStudent.cs" t="Include" />
+          <e p="InternshipTechnology.cs" t="Include" />
+          <e p="Lector.cs" t="Include" />
+          <e p="LectorCourse.cs" t="Include" />
+          <e p="Period.cs" t="Include" />
+          <e p="Person.cs" t="Include" />
+          <e p="Student.cs" t="Include" />
+          <e p="StudentInternShip.cs" t="Include" />
+          <e p="Technology.cs" t="Include" />
+          <e p="Validation.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="WebApplication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="WebApplication20200413135450 - Web Deploy.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="AddressRepository.cs" t="Include" />
+          <e p="CompanyRepository.cs" t="Include" />
+          <e p="CourseRepository.cs" t="Include" />
+          <e p="CoördinatorRepository.cs" t="Include" />
+          <e p="CrudRepository.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IAddressRepository.cs" t="Include" />
+            <e p="ICompanyRepository.cs" t="Include" />
+            <e p="ICourseRepository.cs" t="Include" />
+            <e p="ICoördinatorRepository.cs" t="Include" />
+            <e p="ICrudRepository.cs" t="Include" />
+            <e p="IInternshipRepository.cs" t="Include" />
+            <e p="ILectorRepository.cs" t="Include" />
+            <e p="ILoginRepository.cs" t="Include" />
+            <e p="IPeriodRepository.cs" t="Include" />
+            <e p="IPersonRepository.cs" t="Include" />
+            <e p="IStudentRepository.cs" t="Include" />
+            <e p="ITechnologyRepository.cs" t="Include" />
+            <e p="IValidationRepository.cs" t="Include" />
+          </e>
+          <e p="InternshipRepository.cs" t="Include" />
+          <e p="LectorRepository.cs" t="Include" />
+          <e p="LoginRepository.cs" t="Include" />
+          <e p="PeriodRepository.cs" t="Include" />
+          <e p="PersonRepository.cs" t="Include" />
+          <e p="StudentRepository.cs" t="Include" />
+          <e p="TechnologyRepository.cs" t="Include" />
+          <e p="ValidationRepository.cs" t="Include" />
+        </e>
+        <e p="site" t="Include">
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="cs" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="de" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="dotnet-aspnet-codegenerator-design.dll" t="Include" />
+          <e p="es" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="fr" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="it" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="ja" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="ko" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="Microsoft.AspNetCore.Authentication.JwtBearer.dll" t="Include" />
+          <e p="Microsoft.AspNetCore.Cryptography.Internal.dll" t="Include" />
+          <e p="Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" t="Include" />
+          <e p="Microsoft.AspNetCore.Razor.Language.dll" t="Include" />
+          <e p="Microsoft.AspNetCore.Server.Kestrel.Https.dll" t="Include" />
+          <e p="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll" t="Include" />
+          <e p="Microsoft.Bcl.AsyncInterfaces.dll" t="Include" />
+          <e p="Microsoft.Bcl.HashCode.dll" t="Include" />
+          <e p="Microsoft.CodeAnalysis.CSharp.dll" t="Include" />
+          <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.dll" t="Include" />
+          <e p="Microsoft.CodeAnalysis.dll" t="Include" />
+          <e p="Microsoft.CodeAnalysis.Razor.dll" t="Include" />
+          <e p="Microsoft.CodeAnalysis.Workspaces.dll" t="Include" />
+          <e p="Microsoft.Data.SqlClient.dll" t="Include" />
+          <e p="Microsoft.EntityFrameworkCore.Abstractions.dll" t="Include" />
+          <e p="Microsoft.EntityFrameworkCore.Design.dll" t="Include" />
+          <e p="Microsoft.EntityFrameworkCore.dll" t="Include" />
+          <e p="Microsoft.EntityFrameworkCore.Relational.dll" t="Include" />
+          <e p="Microsoft.EntityFrameworkCore.SqlServer.dll" t="Include" />
+          <e p="Microsoft.Extensions.Caching.Abstractions.dll" t="Include" />
+          <e p="Microsoft.Extensions.Caching.Memory.dll" t="Include" />
+          <e p="Microsoft.Extensions.Configuration.Abstractions.dll" t="Include" />
+          <e p="Microsoft.Extensions.Configuration.Binder.dll" t="Include" />
+          <e p="Microsoft.Extensions.Configuration.dll" t="Include" />
+          <e p="Microsoft.Extensions.DependencyInjection.Abstractions.dll" t="Include" />
+          <e p="Microsoft.Extensions.DependencyInjection.dll" t="Include" />
+          <e p="Microsoft.Extensions.Identity.Core.dll" t="Include" />
+          <e p="Microsoft.Extensions.Logging.Abstractions.dll" t="Include" />
+          <e p="Microsoft.Extensions.Logging.dll" t="Include" />
+          <e p="Microsoft.Extensions.Options.dll" t="Include" />
+          <e p="Microsoft.Extensions.Primitives.dll" t="Include" />
+          <e p="Microsoft.Identity.Client.dll" t="Include" />
+          <e p="Microsoft.IdentityModel.JsonWebTokens.dll" t="Include" />
+          <e p="Microsoft.IdentityModel.Logging.dll" t="Include" />
+          <e p="Microsoft.IdentityModel.Protocols.dll" t="Include" />
+          <e p="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" t="Include" />
+          <e p="Microsoft.IdentityModel.Tokens.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" t="Include" />
+          <e p="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" t="Include" />
+          <e p="Newtonsoft.Json.dll" t="Include" />
+          <e p="NuGet.Frameworks.dll" t="Include" />
+          <e p="pl" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="pt-BR" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="ru" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="runtimes" t="Include">
+            <e p="unix" t="Include">
+              <e p="lib" t="Include">
+                <e p="netcoreapp2.0" t="Include">
+                  <e p="System.Runtime.Caching.dll" t="Include" />
+                </e>
+                <e p="netcoreapp2.1" t="Include">
+                  <e p="Microsoft.Data.SqlClient.dll" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="win" t="Include">
+              <e p="lib" t="Include">
+                <e p="netcoreapp2.0" t="Include">
+                  <e p="System.Runtime.Caching.dll" t="Include" />
+                </e>
+                <e p="netcoreapp2.1" t="Include">
+                  <e p="Microsoft.Data.SqlClient.dll" t="Include" />
+                </e>
+                <e p="netstandard2.0" t="Include">
+                  <e p="System.Security.Cryptography.ProtectedData.dll" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="win-arm64" t="Include">
+              <e p="native" t="Include">
+                <e p="sni.dll" t="Include" />
+              </e>
+            </e>
+            <e p="win-x64" t="Include">
+              <e p="native" t="Include">
+                <e p="sni.dll" t="Include" />
+              </e>
+            </e>
+            <e p="win-x86" t="Include">
+              <e p="native" t="Include">
+                <e p="sni.dll" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="System.Composition.AttributedModel.dll" t="Include" />
+          <e p="System.Composition.Convention.dll" t="Include" />
+          <e p="System.Composition.Hosting.dll" t="Include" />
+          <e p="System.Composition.Runtime.dll" t="Include" />
+          <e p="System.Composition.TypedParts.dll" t="Include" />
+          <e p="System.Configuration.ConfigurationManager.dll" t="Include" />
+          <e p="System.IdentityModel.Tokens.Jwt.dll" t="Include" />
+          <e p="System.Runtime.Caching.dll" t="Include" />
+          <e p="System.Security.Cryptography.ProtectedData.dll" t="Include" />
+          <e p="tr" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="web.config" t="Include" />
+          <e p="WebApplication.deps.json" t="Include" />
+          <e p="WebApplication.dll" t="Include" />
+          <e p="WebApplication.exe" t="Include" />
+          <e p="WebApplication.pdb" t="Include" />
+          <e p="WebApplication.runtimeconfig.json" t="Include" />
+          <e p="zh-Hans" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+          <e p="zh-Hant" t="Include">
+            <e p="Microsoft.CodeAnalysis.CSharp.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.resources.dll" t="Include" />
+            <e p="Microsoft.CodeAnalysis.Workspaces.resources.dll" t="Include" />
+          </e>
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="web.config" t="Include" />
+        <e p="WebApplication.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="WebApplication.sln" t="IncludeFlat" />
+      <e p="WebApplication.unitTests" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IntegrationTests" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="WebApplication.UnitTests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTests" t="Include">
+          <e p="Helpers" t="Include">
+            <e p="UserVerifierTests.cs" t="Include" />
+          </e>
+          <e p="InMemoryRepositories" t="Include">
+            <e p="InMemoryCompanyRepository.cs" t="Include" />
+            <e p="InMemoryPersonRepository.cs" t="Include" />
+            <e p="InMemoryRepository.cs" t="Include" />
+          </e>
+          <e p="Managers" t="Include">
+            <e p="CompanyManagerTests.cs" t="Include" />
+            <e p="PersonManagerTests.cs" t="Include" />
+          </e>
+          <e p="Mocks" t="Include">
+            <e p="MockPdfGenerator.cs" t="Include" />
+          </e>
+          <e p="SutTests.cs" t="Include" />
+        </e>
+        <e p="WebApplication.UnitTests.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

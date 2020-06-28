@@ -1,0 +1,227 @@
+<div *ngIf="formsCreated && !loading">
+  <mat-horizontal-stepper [linear]="false" #stepper>
+    <mat-step [stepControl]="contactGroup">
+      <form [formGroup]="contactGroup" #firstForm="ngForm">
+        <ng-template matStepLabel>Contact persoon</ng-template>
+        <div fxLayoutAlign="center">
+          <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+        </div>
+        <p>Deze persoon zal de stagedocumenten ondertekenen</p>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-label>Functietitel</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Naam</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Voornaam</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>TelefoonNummer</mat-label>
+            <input matInput formControlName="tel" placeholder="Formaat: +32 11 123456 of +32 496 123456">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="promotorGroup">
+      <form [formGroup]="promotorGroup" #secondForm="ngForm">
+        <ng-template matStepLabel>Promotor</ng-template>
+        <div fxLayoutAlign="center" fxLayoutGap="10px">
+          <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+          <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+        </div>
+        <p>Deze persoon zal de student technisch begeleiden tijdens de stageperiode en
+          zal tevens aanwezig zijn tijdens het juryexamen van de student</p>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-label>Functietitel</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Naam</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Voornaam</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>TelefoonNummer</mat-label>
+            <input matInput formControlName="tel" placeholder="Formaat: +32 11 123456 of +32 496 123456">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="locationGroup">
+      <form [formGroup]="locationGroup" #thirdForm="ngForm">
+        <ng-template matStepLabel>Locatie</ng-template>
+        <div fxLayoutAlign="center" fxLayoutGap="10px">
+          <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+          <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+        </div>
+        <p>indien adres verschillende is van bedrijfsadres gelieve adres ook in te vullen</p>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <mat-label>Aantal IT-medewerkers (op het bedrijf)</mat-label>
+            <mat-label> die de student technisch kunnen begeleiden bij het uitwerken van zijn stageopdracht</mat-label>
+            <input matInput formControlName="supportEmployees" type="number">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Straat</mat-label>
+            <input matInput formControlName="street">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nummer</mat-label>
+            <input matInput formControlName="number">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>bus</mat-label>
+            <input matInput formControlName="box">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Zipcode</mat-label>
+            <input matInput formControlName="zip">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Stad</mat-label>
+            <input matInput formControlName="city">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Land</mat-label>
+            <input matInput formControlName="country">
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="formGroup">
+      <form [formGroup]="formGroup" #fourthForm="ngForm">
+        <ng-template matStepLabel>Stageopdracht</ng-template>
+        <div fxLayoutAlign="center" fxLayoutGap="10px">
+          <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+          <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+        </div>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <a href="https://docs.google.com/document/d/1MiIpI7U51rwLPKmZY2Cvq7tSqqtEloRp8lvVE06DRj4/edit?usp=sharing" target="_blank">Info
+            onderzoekstopic</a>
+          <mat-label>Voorkeur afstudeerrichtingen</mat-label>
+          <mat-selection-list formControlName="courses">
+            <mat-list-option color="primary" checkboxPosition="before" *ngFor="let course of courses" [value]="course.id">
+              {{ course.name}}
+            </mat-list-option>
+          </mat-selection-list>
+          <mat-form-field>
+            <mat-label>Titel van stageopdracht</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Omschrijving van de opdracht</mat-label>
+            <textarea matInput formControlName="description"
+                      placeholder="Beschrijf hier duidelijk en zo gedetailleerd mogelijk wat de stageopdracht inhoudelijk zal omvatten."></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="environmentGroup">
+      <form [formGroup]="environmentGroup" #fifthForm="ngForm">
+        <ng-template matStepLabel>Omgeving</ng-template>
+        <div fxLayoutAlign="center" fxLayoutGap="10px">
+          <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+          <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+        </div>
+        <p>In welke IT-omgeving dient de stageopdracht uitgewerkt te worden: bijvoorbeeld</p>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <mat-selection-list formControlName="technologies">
+            <mat-list-option color="primary" checkboxPosition="before" *ngFor="let technology of technologies" [value]="technology.id">
+              {{ technology.name}}
+            </mat-list-option>
+          </mat-selection-list>
+          <p class="italic">*Indien Andere werd gekozen, gelieve deze keuze te verduidelijken in de technische omschrijving.</p>
+          <mat-form-field>
+            <mat-label>Verdere beschrijving van de technische omgeving</mat-label>
+            <textarea matInput formControlName="techDescription"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Randvoorwaarden</ng-template>
+      <div fxLayoutAlign="center" fxLayoutGap="10px">
+        <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+        <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+      </div>
+      <mat-form-field fxFlexFill>
+        <mat-label>Randvoorwaarden</mat-label>
+        <textarea matInput [formControl]="conditionsControl" placeholder="Zijn er specifieke eisen waaraan moet worden voldaan voor het uitvoeren van de stageopdracht vb bereidheid tot
+        communicatie in het Engels,
+        beschikken over een auto, bereikbaar met openbaar vervoer,..."></textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>OnderzoeksThema</ng-template>
+      <div fxLayoutAlign="center" fxLayoutGap="10px">
+        <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+        <button mat-raised-button class="primary-color" matStepperNext>Volgende</button>
+      </div>
+      <mat-form-field fxFlexFill>
+        <mat-label>Onderzoeksthema</mat-label>
+        <textarea matInput [formControl]="researchTopic" placeholder="Onderzoek dat leidt tot het vergaren van diepgaande kennis voor het oplossen van een praktijkprobleem. Het thema kan zich situeren in het kader of in het verlengde van de stageopdracht ofwel een specifieke onderzoeksopdracht aangebracht door het bedrijf (zie begeleidende brief voor enkele
+        voorbeelden)"></textarea>
+      </mat-form-field>
+    </mat-step>
+    <mat-step [stepControl]="extraFormGroup">
+      <form [formGroup]="extraFormGroup" #sixthForm="ngForm">
+        <ng-template matStepLabel>Overige</ng-template>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div fxLayoutAlign="center" fxLayoutGap="10px">
+            <button mat-raised-button class="primary-color" matStepperPrevious>Vorige</button>
+            <button mat-raised-button class="primary-color" *ngIf="!internship" (click)="submitInternship(stepper)">Aanvragen</button>
+            <button mat-raised-button class="primary-color" *ngIf="internship" (click)="submitInternship(stepper)">Updaten</button>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20%">
+            <div fxLayout="column">
+              <mat-label>Stageperiode</mat-label>
+              <mat-selection-list formControlName="period">
+                <mat-list-option color="primary" checkboxPosition="before" *ngFor="let period of periods" [value]="period.id">
+                  {{ period.name }}
+                </mat-list-option>
+              </mat-selection-list>
+            </div>
+            <div fxLayout="column" fxLayoutGap="10px">
+              <mat-label>Aantal gewenste stagiairs (max. 2 per stageproject)</mat-label>
+              <mat-radio-group color="primary" formControlName="nrOfStudents" fxLayout="column" fxLayoutGap="10px">
+                <mat-radio-button [value]="1">1 student</mat-radio-button>
+                <mat-radio-button [value]="2">2 studenten</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div>
+              <mat-label>Inleidende activiteiten / verwachtingen</mat-label>
+              <mat-selection-list formControlName="expectations">
+                <mat-list-option color="primary" [value]="1" checkboxPosition="before">Sollicitatiegesprek</mat-list-option>
+                <mat-list-option color="primary" [value]="2" checkboxPosition="before">CV</mat-list-option>
+                <mat-list-option color="primary" [value]="3" checkboxPosition="before">Vergoeding / tegemoetkoming in
+                  verplaatsingskosten
+                </mat-list-option>
+              </mat-selection-list>
+            </div>
+          </div>
+          <mat-form-field>
+            <mat-label>Andere bemerkingen</mat-label>
+            <textarea matInput formControlName="remarks"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

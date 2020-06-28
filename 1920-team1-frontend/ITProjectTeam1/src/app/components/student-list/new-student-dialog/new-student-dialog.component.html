@@ -1,0 +1,92 @@
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup" errorMessage="Alle velden moeten ingevuld zijn">
+    <form [formGroup]="firstFormGroup" fxLayout="column">
+      <ng-template matStepLabel>Info</ng-template>
+      <mat-form-field  *ngIf="!data.isLector">
+        <mat-label>Afstudeerrichting</mat-label>
+        <mat-select required formControlName="courseId">
+          <mat-option *ngFor="let course of courses" [value]="course.id">
+            {{ course.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field *ngIf="data.isLector">
+        <mat-label>Vakgebieden</mat-label>
+        <mat-select multiple required formControlName="courseId">
+          <mat-option *ngFor="let course of courses" [value]="course.id">
+            {{ course.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Aanspreektitel</mat-label>
+        <input matInput placeholder="vb. 'mr.' of 'mevr.' " formControlName="title" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Voornaam</mat-label>
+        <input matInput placeholder="Voornaam" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Naam</mat-label>
+        <input matInput placeholder="Naam" formControlName="name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput placeholder="E-mail" formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>GSM-nummer</mat-label>
+        <input matInput placeholder="GSM-nummer" formControlName="telephoneNumber" required>
+      </mat-form-field>
+      <div fxLayoutGap="5px">
+        <button mat-button matStepperNext class="primary-color">Volgende</button>
+        <button mat-button matStepperNext class="primary-color" (click)="close()">Annuleer</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" errorMessage="Alle velden moeten ingevuld zijn">
+    <form [formGroup]="secondFormGroup" fxLayout="column">
+      <ng-template matStepLabel>Adres</ng-template>
+      <mat-form-field>
+      <mat-label>Straat</mat-label>
+      <input matInput placeholder="Ex. Hasseltsesteenweg" formControlName="street"
+             required>
+    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nummer</mat-label>
+        <input matInput placeholder="Ex. 5" formControlName="number"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Postcode</mat-label>
+        <input matInput placeholder="Ex. 3800" formControlName="zipCode"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Stad</mat-label>
+        <input matInput placeholder="Ex. Hasselt" formControlName="city"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Land</mat-label>
+        <input matInput placeholder="Ex. België" formControlName="country"
+               required>
+      </mat-form-field>
+      <div fxLayoutGap="5px">
+        <button mat-button matStepperPrevious class="primary-color">Vorige</button>
+        <button mat-button matStepperNext class="primary-color">Volgende</button>
+        <button mat-button matStepperNext class="primary-color" (click)="close()">Annuleer</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Klaar</ng-template>
+    <p>Druk op opslaan om de student aan te maken.</p>
+    <div fxLayoutGap="5px">
+      <button mat-button class="primary-color" matStepperPrevious>Vorige</button>
+      <button mat-button class="primary-color" (click)="stepper.reset()">Herstart</button>
+      <button mat-button matStepperNext class="primary-color" (click)="close()">Annuleer</button>
+      <button mat-raised-button class="primary-color" mat-dialog-close (click)="save()">Opslaan</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

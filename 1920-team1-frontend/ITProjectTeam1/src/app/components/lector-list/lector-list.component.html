@@ -1,0 +1,16 @@
+<mat-card class="scrollable-content">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of itemList">
+        <p class="hover-effect" (click)="showItem(item.id)">{{item.firstName}} {{item.name}}</p>
+        <button mat-icon-button (click)="deleteLector(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="primary-color" (click)="openCreateLectorDialog()">Nieuwe lector</button>
+  </mat-card-actions>
+</mat-card>
+

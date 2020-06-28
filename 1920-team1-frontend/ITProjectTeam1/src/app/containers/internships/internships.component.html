@@ -1,0 +1,167 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" *ngIf="internships && !isLoading" class="max-width padding-bottom">
+  <div fxFlex>
+    <h1>STAGEVOORSTELLEN</h1>
+  </div>
+  <div *ngIf="newInterships && newInterships.length === 0" fxFlex>
+    <h3>Er zijn momenteel geen nieuwe stagevoorstellen</h3>
+  </div>
+  <div>
+    <div fxLayoutGap="10px" class="div-to-change">
+      <div fxFlex *ngIf='newInterships && newInterships.length'>
+        <h3>Nieuwe stagevoorstellen</h3>
+        <app-item-list [itemList]="newInterships" (selectedItemId)="showItem($event)"></app-item-list>
+      </div>
+      <div *ngIf="otherInterships && otherInterships.length === 0" fxFlex>
+        <h3>Er zijn momenteel geen stagevoorstellen toegewezen</h3>
+      </div>
+      <div fxFlex fxLayout="column" *ngIf='otherInterships && otherInterships.length'>
+        <h3>Overige stagevoorstellen</h3>
+        <mat-form-field style="width: 400px">
+          <mat-label>Filter</mat-label>
+          <mat-select [formControl]="states" multiple>
+            <mat-option *ngFor="let state of statesList" [value]="state.id">{{state.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <app-item-list [itemList]="otherInterships" (selectedItemId)="showItem($event)"></app-item-list>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" class="card div-to-change">
+    <div *ngIf="internship && !isLoadingDetails">
+      <mat-card>
+        <mat-card-content>
+          <p>
+            <strong>Titel:</strong> {{ internship.title }}
+          </p>
+          <p>
+            <strong>Omschrijving:</strong>
+            {{ internship.description }}
+          </p>
+          <div fxLayout="row" fxLayoutGap="10px">
+            <div fxLayout="row" fxLayoutGap="10px">
+              <strong>Studierichting:</strong>
+              <div fxLayout="column">
+                <div *ngFor="let les of internship.courses">
+                  {{ les.name }}
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+              <strong>Technologieën: </strong>
+              <div fxLayout="column">
+                <div *ngFor="let technologie of internship.technologies">
+                  {{ technologie.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            <strong> Technische omschrijving:</strong> {{ internship.techDescription }}
+          </p>
+          <p>
+            <strong>
+              Adres:</strong> {{ internship.address.street }}  {{internship.address.number}}  {{internship.address.zipCode}}  {{internship.address.country}}
+          </p>
+          <p>
+            <strong> Opmerkingen:</strong> {{ internship.remarks }}
+          </p>
+          <p>
+            <strong> Onderzoeks onderwerp:</strong> {{ internship.researchTopic }}
+          </p>
+          <div fxLayout="row" fxLayoutGap="10px">
+            <div fxLayout="row" fxLayoutGap="10px">
+              <strong>Aantal studenten:</strong>   {{ internship.studentAmount }}
+            </div>
+            <div fxLayout="row" fxLayoutGap="10px">
+              <strong> Student:</strong>
+              <div fxLayout="column">
+                <div *ngFor="let student of internship.students">
+                  {{ student.firstName }} + {{student.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+              <strong>
+                Contactpersoon:</strong> {{ internship.contactPerson.firstName + ' ' + internship.contactPerson.name }}
+            </p>
+            <p>
+              <strong> E-mail:</strong> {{ internship.contactPerson.email }}
+            </p>
+            <p>
+              <strong> GSM:</strong> {{ internship.contactPerson.telephoneNumber }}
+            </p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
+            <div fxLayoutAlign="end" *ngIf="(internship.state === 0 || internship.state === 1) && !loggedInAsLector">
+              <button mat-raised-button class="primary-color" (click)="showDialog()">Toewijzen</button>
+            </div>
+            <div fxLayoutAlign="end" *ngIf="(internship.state === 4 || internship.state === 1)  && !loggedInAsLector">
+              <button mat-raised-button class="primary-color" (click)="approve()">Goedkeuren</button>
+              <button mat-raised-button class="primary-color" (click)="toModify()">Terugsturen voor aanpassing</button>
+              <button mat-raised-button class="primary-color" (click)="reject()">Afwijzen</button>
+            </div>
+          </div>
+          <div fxLayoutAlign="end" *ngIf="loggedInAsLector">
+            <button mat-raised-button class="primary-color" (click)="updateValidation(1)">Goedkeuren</button>
+            <button mat-raised-button class="primary-color" (click)="updateValidation(2)">Terugsturen voor aanpassing
+            </button>
+            <button mat-raised-button class="primary-color" (click)="updateValidation(3)">Afwijzen</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div *ngIf="!isLoadingDetails && validations">
+      <div fxFlex fxLayout="column" fxLayoutGap="10px">
+        <div *ngIf="validations.length && !loggedInAsLector">
+          <mat-card>
+            <mat-card-content>
+              <h3>Toegewezen lectoren</h3>
+              <mat-list>
+                <mat-list-item (click)="showFeedBack(validation)"
+                               *ngFor="let validation of validations; let i = index">
+                  <p class="hover-effect">{{validation.lector.firstName}} {{validation.lector.name}}</p>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div fxFlex="50" *ngIf="show">
+          <mat-card>
+            <mat-card-content>
+              <h3>Feedback</h3>
+              <div *ngIf="feedBack">
+                <p>Feedback gegeven op: {{feedBack.modifiedAt | date}}</p>
+                <p>{{feedBack.value}}</p>
+              </div>
+              <div *ngIf="!feedBack">
+                <p>Er is nog geen feedback gegeven..</p>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div fxFlex="50" *ngIf="loggedInAsLector">
+          <mat-card>
+            <mat-card-content>
+              <div fxLayout="column" fxLayoutGap="10px">
+                <h3>Feedback</h3>
+                <mat-form-field fxFlex>
+                  <textarea [formControl]="feedbackFormControl" class="textarea" fxFlex matInput
+                            rows="8"></textarea>
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!internships">
+  <h1>Er zijn momenteel geen stagevoorstellen</h1>
+</div>

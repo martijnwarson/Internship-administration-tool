@@ -1,0 +1,17 @@
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <div fxLayout="column">
+      <div class="drop-zone" [class.over]="dragOver"
+           fxLayoutAlign="center center" (drop)="onDrop($event)" (dragover)="onDragOver($event)"
+           (dragleave)="onDragLeave()" (click)="fileUpload.click()">
+        <span fxLayoutAlign="center center" *ngIf="!form?.get('file').value"><mat-icon>file_upload</mat-icon>Upload </span>
+        <span fxLayoutAlign="center center" *ngIf="form?.get('file').value">{{fileName}}</span>
+        <input #fileUpload name="file" id="fileUpload" (change)="form?.get('file').setValue($event.target.value)" type="file" accept=".csv" style="display: none">
+      </div>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions fxLayoutAlign="end">
+  <button mat-raised-button class="primary-color" mat-dialog-close>Annuleer</button>
+  <button mat-raised-button class="primary-color" [mat-dialog-close]="onUploadClick()" [disabled]="!form.valid">Upload</button>
+</div>

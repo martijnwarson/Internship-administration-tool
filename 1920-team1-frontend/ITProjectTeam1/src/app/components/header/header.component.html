@@ -1,0 +1,24 @@
+<div class="toolbar primary-color" role="banner">
+  <img
+    width="40"
+    height="40"
+    alt="Angular Logo"
+    src="../../../assets/logopxl.png"
+  />
+  <span></span>
+  <div fxFlex fxLayoutAlign="end" *ngIf="auth.handleLogoutEllipsis()">
+    <div fxLayout="row">
+      <div fxLayoutAlign="center center">
+        <p>{{userName}}</p>
+      </div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" class="max-width padding-bottom" *ngIf="!isLoading">
+  <div fxFlex>
+    <h1>NIEUWE BEDRIJFSAANVRAGEN</h1>
+  </div>
+  <div *ngIf="newCompanies.length === 0">
+    <h3>Er zijn momenteel geen nieuwe bedrijfsaanvragen</h3>
+  </div>
+  <div fxLayout="row" fxLayoutGap="30px" *ngIf="newCompanies && newCompanies.length" class="div-to-change">
+    <div fxLayoutGap="10px">
+      <div class="companies-card">
+        <app-new-company-list [companyList]="newCompanies"
+                              (selectedCompanyId)="showItem($event)"></app-new-company-list>
+      </div>
+    </div>
+   <div fxLayout="row" fxLayoutGap="10px" class="card div-to-change" *ngIf="company && !loadingDetails">
+      <div>
+        <mat-card>
+          <mat-card-content>
+            <p>
+              <strong>Bedrijfsnaam:</strong> {{company.name}}
+            </p>
+            <p>
+              <strong>Straat:</strong> {{company.address.street}}
+            </p>
+            <p>
+              <strong>Nummer:</strong> {{company.address.number}}
+            </p>
+            <p>
+              <strong>Postcode:</strong> {{company.address.zipCode}}
+            </p>
+            <p>
+              <strong>Stad:</strong> {{company.address.city}}
+            </p>
+            <p>
+              <strong>Land:</strong> {{company.address.country}}
+            </p>
+            <p>
+              <strong>Functietitel contactpersoon:</strong> {{company.contactPerson.title}}
+            </p>
+            <p>
+              <strong>Voornaam contactpersoon:</strong> {{company.contactPerson.firstName}}
+            </p>
+            <p>
+              <strong>Achternaam contactpersoon:</strong> {{company.contactPerson.name}}
+            </p>
+            <p>
+              <strong>Email:</strong> {{company.contactPerson.email}}
+            </p>
+            <p>
+              <strong>Aantal werknemers:</strong> {{company.amountOfEmployees}}
+            </p>
+            <p>
+              <strong>Waarvan IT:</strong> {{company.amountOfEmployeesIt}}
+            </p>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <div fxLayoutAlign="end">
+              <button mat-raised-button class="primary-color" (click)="approveCompany(company.id)">Goedkeuren</button>
+              <button mat-raised-button class="primary-color" (click)="rejectCompany(company.id)">Afkeuren</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

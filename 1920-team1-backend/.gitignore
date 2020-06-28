@@ -1,0 +1,4 @@
+/WebApplication/*.dll
+/WebApplication/*.tmp
+/WebApplication/*.cache
+/WebApplication/*.txt

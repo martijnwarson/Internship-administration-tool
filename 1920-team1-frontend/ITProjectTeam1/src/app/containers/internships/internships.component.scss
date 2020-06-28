@@ -1,0 +1,51 @@
+h1 {
+    color: #58a518;
+    font-size: 18px;
+}
+
+mat-card {
+  background-color: #f3f5f2; //pxl light green
+  margin-right: auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  min-width: 350px;
+  max-width: 700px;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.max-width {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .div-to-change {
+    max-width: 100%;
+    flex-direction: column !important;
+  }
+  mat-card {
+    margin-bottom: 10px;
+  }
+  p {
+    max-width: 350px;
+  }
+}
+
+.hover-effect:hover {
+  color: #58a518;
+}
+
+.textarea {
+  resize: none !important;
+}
+
+h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

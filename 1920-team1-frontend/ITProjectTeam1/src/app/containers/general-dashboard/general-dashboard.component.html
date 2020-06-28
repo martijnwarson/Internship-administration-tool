@@ -1,0 +1,44 @@
+<mat-tab-group animationDuration="0ms"
+               dynamicHeight
+               class="max-width">
+  <mat-tab label="Mijn aanvragen" *ngIf="showApplications">
+    <ng-template matTabContent>
+      <app-company-internships></app-company-internships>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Nieuwe stage aanvragen" *ngIf="showInternshipsApplications">
+    <ng-template matTabContent>
+      <app-create-internship></app-create-internship>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Bedrijfsaanvragen" *ngIf="showCompanyApplications">
+    <ng-template matTabContent>
+      <app-new-companies></app-new-companies>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Stagevoorstellen" *ngIf="showInternships">
+    <ng-template matTabContent>
+      <app-internships></app-internships>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Stagevoorstellen" *ngIf="showStudentInternships">
+    <ng-template matTabContent>
+      <app-student-internships></app-student-internships>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Studenten" *ngIf="showStudents">
+    <ng-template matTabContent>
+      <app-students></app-students>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Lectoren" *ngIf="showLectors">
+    <ng-template matTabContent>
+      <app-lectors></app-lectors>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Bedrijven" *ngIf="showCompanies">
+    <ng-template matTabContent>
+      <app-companies></app-companies>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

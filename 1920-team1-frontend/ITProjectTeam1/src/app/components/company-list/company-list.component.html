@@ -1,0 +1,9 @@
+<mat-card class="scrollable-content">
+<mat-card-content>
+  <mat-list>
+    <mat-list-item *ngFor="let company of companyList" >
+      <p class="hover-effect" (click)="showCompany(company.id)">{{ company.name }}</p>
+    </mat-list-item>
+  </mat-list>
+</mat-card-content>
+</mat-card>

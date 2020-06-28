@@ -1,0 +1,32 @@
+<mat-card class="scrollable-content">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of itemList">
+        <button mat-icon-button (click)="showItem(item.id)">
+          <mat-icon *ngIf="item.state === 0" matTooltip="Nieuw stagevoorstel ingediend door bedrijf. Nog geen actie ondernomen door PXL." [matTooltipPosition]="position.value">
+            fiber_new
+          </mat-icon>
+          <mat-icon *ngIf="item.state === 1" matTooltip="Stagevoorstel is doorgestuurd voor controle." [matTooltipPosition]="position.value">
+            hourglass_empty
+          </mat-icon>
+          <mat-icon *ngIf="item.state === 2" class="orange-color"
+                    matTooltip="Er zijn vragen en/of opmerkingen voor het bedrijf over dit stagevoorstel." [matTooltipPosition]="position.value">
+            error_outline
+          </mat-icon>
+          <mat-icon *ngIf="item.state === 3" class="green-color"
+                    matTooltip="Stagevoorstel aanvaard. Stagevoorstel kan niet meer gewijzigd worden." [matTooltipPosition]="position.value">
+            done_outline
+          </mat-icon>
+          <mat-icon *ngIf="item.state === 4" matTooltip="Stagevoorstel werd aangepast en wordt gecontroleerd door PXL." [matTooltipPosition]="position.value">
+            edit
+          </mat-icon>
+          <mat-icon *ngIf="item.state === 5" class="red-color"
+                    matTooltip="Stagevoorstel werd afgewezen." [matTooltipPosition]="position.value">
+            clear
+          </mat-icon>
+        </button>
+        <p class="hover-effect" (click)="showItem(item.id)">{{item.company}} - {{item.title}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

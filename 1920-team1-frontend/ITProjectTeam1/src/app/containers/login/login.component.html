@@ -1,0 +1,28 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<form class="container" *ngIf="!isLoading">
+  <mat-card class="card" fxLayout="column" fxFlex.gt-sm="40" fxFlex="90" fxLayoutGap="20px">
+    <mat-form-field fxFlex>
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="form?.get('email')" [errorStateMatcher]="matcher"
+             placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="form?.get('email') && !form?.get('email').value">
+        Gelieve een geldig e-mailadres in te geven
+      </mat-error>
+      <mat-error *ngIf="!form?.get('email').value">
+        Email is <strong>verplicht</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Password</mat-label>
+      <input matInput [formControl]="form?.get('password')" type="password">
+      <mat-error *ngIf="!form?.get('password').value">
+        Paswoord is <strong>verplicht</strong>
+      </mat-error>
+    </mat-form-field>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <button mat-raised-button class="primary-color" (click)="login()">Login</button>
+      <button mat-raised-button class="primary-color" (click)="register()">Registreer bedrijf</button>
+    </div>
+  </mat-card>
+</form>

@@ -1,0 +1,17 @@
+<mat-card class="scrollable-content">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of itemList">
+        <button mat-icon-button>
+          <mat-icon *ngIf="item.favorite" class="favorite-color" (click)="markAsFavorite(item.id)" matTooltip="Stagevoorstel gemarkeerd als favoriet" [matTooltipPosition]="position.value">
+            favorite
+          </mat-icon>
+          <mat-icon *ngIf="!item.favorite" class="favorite-color" (click)="removeAsFavorite(item.id)" matTooltip="Stagevoorstel markeren als favoriet" [matTooltipPosition]="position.value">
+            favorite_border
+          </mat-icon>
+        </button>
+        <p (click)="showItem(item.id)" class="hover-effect">{{item.company}} - {{item.title}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

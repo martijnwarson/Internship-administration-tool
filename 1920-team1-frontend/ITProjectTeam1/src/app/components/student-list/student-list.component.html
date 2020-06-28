@@ -1,0 +1,17 @@
+<mat-card class="scrollable-content">
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of itemList">
+        <p class="hover-effect" (click)="showItem(item.id)">{{item.firstName}} {{item.name}}</p>
+        <button mat-icon-button (click)="deleteStudent(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="center" fxLayoutGap="10px">
+    <button mat-raised-button class="primary-color" (click)="openCreateStudentDialog()">Nieuwe student</button>
+    <button mat-raised-button class="primary-color" (click)="uploadDialog()">Upload studenten</button>
+  </mat-card-actions>
+</mat-card>
+

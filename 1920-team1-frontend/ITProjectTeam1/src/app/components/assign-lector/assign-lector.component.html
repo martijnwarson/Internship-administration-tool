@@ -1,0 +1,37 @@
+<h3>Lectoren toewijzen</h3>
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <input type="text" matInput [formControl]="lectorControl" [matAutocomplete]="auto">
+      </mat-form-field>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option checkboxPosition="before" *ngFor="let lector of filteredLectors | async"
+                    [value]="lector"
+                    (onSelectionChange)="setValue($event.source.value)">
+          {{ lector.name }} {{ lector.firstName}}
+        </mat-option>
+      </mat-autocomplete>
+
+      <div *ngIf="selectedLectors.length">
+        <strong>Lectoren:</strong>
+        <mat-list>
+          <mat-list-item *ngFor="let lector of selectedLectors">
+            <p>{{ lector.name }} {{lector.firstName}}</p>
+            <button mat-icon-button (click)="deleteLector(lector)">
+              <mat-icon>
+                delete
+              </mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div fxLayoutAlign="end">
+        <button mat-raised-button class="primary-color" [disabled]="!(selectedLectors.length !== 0)" (click)="assignLector()">Toewijzen</button>
+        <button mat-raised-button class="primary-color" mat-dialog-close>Annuleer</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</mat-dialog-content>

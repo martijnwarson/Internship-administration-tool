@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore WebApplication/WebApplication/WebApplication.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output WebApplication/WebApplication/WebApplication.csproj
+artifacts:
+  files:
+    - WebApplication/build_output/**/*
+    - scripts/**/*
+    - appspec.yml

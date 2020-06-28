@@ -1,0 +1,15 @@
+.drop-zone {
+  border-radius: 12px;
+  height: 40px;
+  border: 2px dashed;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+  &.over {
+    background-color: #e0e0e0;
+  }
+  &:hover {
+    border-color: #58a518;
+    color: #58a518;
+    cursor: pointer;
+  }
+}

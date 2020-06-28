@@ -1,0 +1,41 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" class="max-width padding-bottom" *ngIf="!isLoading">
+  <div fxFlex>
+    <h1>LECTOREN</h1>
+  </div>
+  <div *ngIf="!lectors">
+    <h3>Er zijn geen lectoren gevonden</h3>
+  </div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
+    <div fxFlex *ngIf="lectors">
+      <app-lector-list [itemList]="lectors" (selectedItemId)="showItem($event)" (refresh)="refresh()"></app-lector-list>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutGap="10px">
+      <div fxFlex *ngIf="!isLoadingDetails">
+        <div fxFlex *ngIf="lector">
+          <mat-card>
+            <mat-card-content>
+              <p>
+                <strong>Naam:</strong> {{lector.firstName}} {{lector.name}}
+              </p>
+              <p>
+                <strong>Functie:</strong> {{lector.title}}
+              </p>
+              <p>
+                <strong>Email:</strong> {{lector.email}}
+              </p>
+              <strong>Telefoon:</strong>
+              <p>
+                {{lector.telephoneNumber}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!lectors">
+  <h1>Er zijn momenteel geen lectoren</h1>
+</div>

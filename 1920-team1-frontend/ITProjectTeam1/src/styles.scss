@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,body {
+  min-height: 100%;
+}
+
+.mat-tab-body-wrapper {
+  height: 100%;
+}
+
+.primary-color {
+  background-color: black;
+  color: white;
+}
+
+
+.secondary-color {
+  color: #58a518;
+}
+
+.scalable-button {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background: #58a518;
+}
+
+.hover-effect {
+  cursor: pointer
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
+}

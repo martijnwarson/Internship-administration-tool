@@ -1,0 +1,71 @@
+<ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+             [fullScreen]="true"></ngx-spinner>
+<div fxLayout="column" fxLayoutGap="10px" class="max-width padding-bottom" *ngIf="!updatingInternship && !isLoading">
+  <div fxFlex>
+    <h1>MIJN STAGEAANVRAGEN</h1>
+  </div>
+  <div *ngIf="internships && internships.length === 0">
+    <h3>U heeft momenteel geen stageaanvragen ingediend.</h3>
+  </div>
+  <div fxLayout="row" fxLayoutGap="30px" *ngIf="internships && internships.length" class="div-to-change">
+    <div fxLayoutGap="10px">
+      <div fxFlex>
+        <app-item-list [itemList]="internships" (selectedItemId)="showItem($event)"></app-item-list>
+      </div>
+    </div>
+    <div fxLayoutGap="row" fxLayoutGap="10px" fxFlex class="div-to-change">
+      <div fxLayout="row" fxLayoutGap="10px" *ngIf="internship && !loadingDetails">
+        <mat-card>
+          <mat-card-content>
+            <p>
+              <strong>Title:</strong> {{ internship.title }}
+            </p>
+            <p>
+              <strong>Omschrijving:</strong>
+              {{ internship.description }}
+            </p>
+            <strong>Studierichting:</strong>
+            <div *ngFor="let les of internship.courses">
+              {{ les.name }}
+            </div>
+            <div>
+              <p><strong>Technologieën:</strong></p>
+              <div *ngFor="let technology of internship.technologies">
+                {{ technology.name }}
+              </div>
+            </div>
+            <div>
+              <p>
+                <strong>Contactpersoon:</strong> {{ internship.contactPerson.firstName + ' ' + internship.contactPerson.name   }}
+              </p>
+              <p>
+                <strong>E-mail:</strong> {{ internship.contactPerson.email }}
+              </p>
+              <p>
+                <strong>GSM:</strong> {{ internship.contactPerson.telephoneNumber }}
+              </p>
+            </div>
+            <div fxLayoutAlign="end" *ngIf="!(internship.state !== 0 && internship.state !== 2)">
+              <button mat-raised-button class="primary-color" (click)="updateInternship()">Update</button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card *ngIf="internship.feedBack">
+          <mat-card-content>
+            <div fxLayout="column">
+              <h3>Feedback</h3>
+              <p>Feedback gegeven op: {{internship.feedBack.createdAt | date}}</p>
+              <p>{{internship.feedBack.value}}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="updatingInternship">
+  <ngx-spinner bdColor="rgba(189,189,189,0.5)" size="medium" color="#58a518" type="ball-climbing-dot"
+               [fullScreen]="true"></ngx-spinner>
+  <app-internship-form (isLoading)="setSpinner($event)" [linear]="false" [internship]="internship"
+                       (updated)="showOverview($event)"></app-internship-form>
+</div>

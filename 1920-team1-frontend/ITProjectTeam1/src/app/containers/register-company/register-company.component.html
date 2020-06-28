@@ -1,0 +1,107 @@
+<form class="container">
+  <mat-card class="card" fxLayout="column" fxFlex.gt-sm="40" fxFlex="90" fxLayoutGap="20px">
+    <h1>Registreer je bedrijf</h1>
+    <mat-form-field fxFlex>
+      <mat-label>Naam</mat-label>
+      <input matInput [formControl]="form?.get('Name')" [errorStateMatcher]="matcher"
+             placeholder="Vul de naam van het bedrijf in">
+      <mat-error *ngIf="form?.get('Name') && !form?.get('Name').value">
+        Gelieve de naam van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Straat</mat-label>
+      <input matInput [formControl]="form?.get('Address.Street')" [errorStateMatcher]="matcher"
+             placeholder="Vul de straat van het bedrijf in">
+      <mat-error *ngIf="form?.get('Address.Street') && !form?.get('Address.Street').value">
+        Gelieve de straat van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Nummer</mat-label>
+      <input matInput [formControl]="form?.get('Address.Number')" [errorStateMatcher]="matcher"
+             placeholder="Vul de straatnummer van het bedrijf in">
+      <mat-error *ngIf="form?.get('Address.Number') && !form?.get('Address.Number').value">
+        Gelieve de straatnummer van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Postcode</mat-label>
+      <input matInput [formControl]="form?.get('Address.ZipCode')" [errorStateMatcher]="matcher"
+             placeholder="Vul de postcode van het bedrijf in">
+      <mat-error *ngIf="form?.get('Address.ZipCode') && !form?.get('Address.ZipCode').value">
+        Gelieve de postcode van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Stad</mat-label>
+      <input matInput [formControl]="form?.get('Address.City')" [errorStateMatcher]="matcher"
+             placeholder="Vul de stad van het bedrijf in">
+      <mat-error *ngIf="form?.get('Address.City') && !form?.get('Address.City').value">
+        Gelieve de stad van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Land</mat-label>
+      <input matInput [formControl]="form?.get('Address.Country')" [errorStateMatcher]="matcher"
+             placeholder="Vul het land van het bedrijf in">
+      <mat-error *ngIf="form?.get('Address.Country') && !form?.get('Address.Country').value">
+        Gelieve het land van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Functietitel</mat-label>
+      <input matInput [formControl]="form?.get('ContactPerson.Title')" [errorStateMatcher]="matcher"
+             placeholder="Vul de functietitel van de contactpersoon van het bedrijf in">
+      <mat-error *ngIf="form?.get('ContactPerson.Title') && !form?.get('ContactPerson.Title').value">
+        Gelieve de functietitel van de contactpersoon van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Achternaam contactpersoon</mat-label>
+      <input matInput [formControl]="form?.get('ContactPerson.Name')" [errorStateMatcher]="matcher"
+             placeholder="Vul de naam van de contactpersoon van het bedrijf in">
+      <mat-error *ngIf="form?.get('ContactPerson.Name') && !form?.get('ContactPerson.Name').value">
+        Gelieve de achternaam van de contactpersoon van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Voornaam contactpersoon</mat-label>
+      <input matInput [formControl]="form?.get('ContactPerson.FirstName')" [errorStateMatcher]="matcher"
+             placeholder="Vul de voornaam van de contactpersoon van het bedrijf in">
+      <mat-error *ngIf="form?.get('ContactPerson.FirstName') && !form?.get('ContactPerson.FirstName').value">
+        Gelieve de voornaam van de contactpersoon van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>E-mail</mat-label>
+      <input matInput [formControl]="form?.get('ContactPerson.Email')" [errorStateMatcher]="matcher"
+             placeholder="Vul het emailadres van de contactpersoon van het bedrijf in">
+      <mat-error *ngIf="form?.get('ContactPerson.Email') && !form?.get('ContactPerson.Email').value">
+        Gelieve het emailadres van de contactpersoon van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Aantal werknemers</mat-label>
+      <input matInput [formControl]="form?.get('AmountOfEmployees')" [errorStateMatcher]="matcher"
+             type="number"
+             placeholder="Vul het aantal werknemers van het bedrijf in">
+      <mat-error *ngIf="form?.get('AmountOfEmployees') && !form?.get('AmountOfEmployees').value">
+        Gelieve het aantal werknemers van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>Waarvan IT? (Informatica)</mat-label>
+      <input matInput [formControl]="form?.get('AmountOfEmployeesIT')" [errorStateMatcher]="matcher"
+             type="number"
+             placeholder="Vul het aantal werknemer IT van het bedrijf in">
+      <mat-error *ngIf="form?.get('AmountOfEmployeesIT') && !form?.get('AmountOfEmployeesIT').value">
+        Gelieve het aantal werknemers IT van het bedrijf in te vullen.
+      </mat-error>
+    </mat-form-field>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <button mat-raised-button class="primary-color" (click)="save()">Registreer</button>
+      <button mat-raised-button class="primary-color" (click)="cancel()">Annuleer</button>
+    </div>
+  </mat-card>
+</form>
